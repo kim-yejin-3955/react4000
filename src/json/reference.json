@@ -144,8 +144,8 @@
         "num": 23,
         "alpha": "B",
         "attr": "border",
-        "desc": "	border 속성은 테두리 속성을 설정합니다."
-      },
+        "desc": "border 속성은 테두리 속성을 설정합니다."
+      }
     ]
   }
 }
