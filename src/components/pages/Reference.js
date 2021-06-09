@@ -5,8 +5,9 @@ import Header from "../Header";
 import Layout from "../Layout";
 // import Footer from "../Footer";
 import WrapTitle from "../basics/WrapTitle";
+import ReferInfo from "../basics/ReferInfo";
 
-// function ReferText({alpha,attr,desc}) {
+// function ReferText({ alpha, attr, desc }) {
 //   return (
 //     <li>
 //       <a href="/">
@@ -19,60 +20,59 @@ import WrapTitle from "../basics/WrapTitle";
 // }
 
 // const referAttr = [
-//     {
-//         alpha:"A",
-//         attr: "all",
-//         desc: "all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다.",
-//     },
-//     {
-//         alpha:"A",
-//         attr: "align-content",
-//         desc: "align-content 콘텐츠의 상하관계 정렬 상태를 정의합니다.",
-//     },
-//     {
-//         alpha:"A",
-//         attr: "align-items",
-//         desc: "align-items 콘텐츠 내부의 정렬 상태를 정의합니다.",
-//     }
-// ]
+//   {
+//     alpha: "A",
+//     attr: "all",
+//     desc: "all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다.",
+//   },
+//   {
+//     alpha: "A",
+//     attr: "align-content",
+//     desc: "align-content 콘텐츠의 상하관계 정렬 상태를 정의합니다.",
+//   },
+//   {
+//     alpha: "A",
+//     attr: "align-items",
+//     desc: "align-items 콘텐츠 내부의 정렬 상태를 정의합니다.",
+//   },
+// ];
 
 // function Reference() {
 //   return (
-//   <div id="wrap" className="light">
-//     <Header info="none" />
-//     <Layout>
-//       <section id="referCont">
-//         <div className="container">
-//           <WrapTitle text={["HTML", "reference"]} />
-//           <div className="refer-cont">
-//             <div className="refer-table">
-//             <h2>CSS REFERENCE </h2>
-//               <ul>
-//                 {referAttr.map((el) => (
+//     <div id="wrap" className="light">
+//       <Header info="none" />
+//       <Layout>
+//         <section id="referCont">
+//           <div className="container">
+//             <WrapTitle text={["HTML", "reference"]} />
+//             <div className="refer-cont">
+//               <div className="refer-table">
+//                 <h2>CSS REFERENCE </h2>
+//                 <ul>
+//                   {referAttr.map((el) => (
 //                     <ReferText
-//                     key={el.attr}
-//                     alpha={el.alpha}
-//                     attr={el.attr}
-//                     desc={el.desc}
+//                       key={el.attr}
+//                       alpha={el.alpha}
+//                       attr={el.attr}
+//                       desc={el.desc}
 //                     />
-//                 )) }
-//               </ul>
+//                   ))}
+//                 </ul>
+//               </div>
 //             </div>
 //           </div>
-//         </div>
-//       </section>
-//     </Layout>
-//   </div>
-// );
+//         </section>
+//       </Layout>
+//     </div>
+//   );
 // }
 
 class Reference extends React.Component {
   state = {
     isLoading: true,
     refers: [],
+    // refers라는 변수 설정해줘서 이곳에 값을 받아옴
   };
-
-  
 
   getRefer = async () => {
     const {
@@ -109,7 +109,16 @@ class Reference extends React.Component {
                   <div className="refer-cont">
                     <div className="refer-table">
                       <h2>CSS REFERENCE </h2>
-                      <ul></ul>
+                      <ul>
+                        {/* {htmlRefer.map((refer) => (
+                          <ReferInfo 
+                           alpha={refer.alpha}
+                           attr={refer.attr}
+                           desc={refer.desc}
+                          />
+                        ))} */}
+                         
+                      </ul>
                     </div>
                   </div>
                 </div>
